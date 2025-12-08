@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CircuitLab - Jasa Desain Kelistrikan & PCB</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="dark-mode">
+    <header class="py-3 sticky-top" id="header">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand d-flex align-items-center" href="#home">
+          <i
+            class="bi bi-gear-fill"
+            style="font-size: 1.5rem; margin-right: 8px"></i>
+          <span class="fw-bold text-dark">CircuitLab</span>
+        </a>
+
+        <nav class="d-none d-lg-flex align-items-center" id="main-nav">
+          <a class="nav-link text-dark mx-2" href="#home">Home</a>
+          <a class="nav-link text-dark mx-2" href="#layanan-utama">Layanan</a>
+          <a class="nav-link text-dark mx-2" href="#contoh-hasil-kerja"
+            >Portfolio</a
+          >
+          <a class="nav-link text-dark mx-2" href="#paket-harga">Harga</a>
+          <a class="nav-link text-dark mx-2" href="#form-proyek">Kontak</a>
+          
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">
+              CircuitLab
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="#home"
+                  data-bs-dismiss="offcanvas"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#layanan-utama"
+                  data-bs-dismiss="offcanvas"
+                  >Layanan</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#contoh-hasil-kerja"
+                  data-bs-dismiss="offcanvas"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#paket-harga"
+                  data-bs-dismiss="offcanvas"
+                  >Harga</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#form-proyek"
+                  data-bs-dismiss="offcanvas"
+                  >Kontak</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero-section" id="home">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <h1 class="fw-bold mb-3 custom-title">
+              Jasa Desain Kelistrikan & <br />PCB
+            </h1>
+            <p class="lead mb-4 custom-subtitle">
+              Solusi cepat, terjangkau, dan profesional untuk mahasiswa &
+              startup hardware. Kami mengubah ide Anda menjadi prototipe siap
+              produksi.
+            </p>
+            <div class="d-flex flex-column flex-md-row gap-3">
+              <a
+                href="#form-proyek"
+                class="btn custom-button-dark"
+                type="button">
+                Kirim Brief Proyek <i class="bi bi-arrow-right"></i>
+              </a>
+              <a
+                href="https://wa.me/6289699616145?text=Halo%20CircuitLab,%20saya%20mau%20konsultasi%20gratis%20mengenai%20proyek%20saya."
+                target="_blank"
+                class="btn custom-button-outline"
+                type="button">
+                Konsultasi Gratis <i class="bi bi-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 d-flex justify-content-center">
+            <div class="illustration-box">
+              <img src="pcb.jpg" alt="Ilustrasi Desain PCB" />
+              <div class="illustration-content"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section py-5" id="layanan-utama">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-5 mt-3 display-5">Layanan Utama</h2>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-4 col-md-6">
+            <div class="card service-card text-center p-4">
+              <div class="card-body">
+                <div class="service-icon mb-3">
+                  <i class="bi bi-cpu" style="font-size: 2.5rem"></i>
+                </div>
+                <h5 class="card-title fw-bold mb-2">Desain PCB</h5>
+                <p class="card-text text-secondary small">
+                  Layout, routing, output Gerber, dan Bill of Material (BOM)
+                  siap produksi.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card service-card text-center p-4">
+              <div class="card-body">
+                <div class="service-icon mb-3">
+                  <i
+                    class="bi bi-lightning-charge"
+                    style="font-size: 2.5rem"></i>
+                </div>
+                <h5 class="card-title fw-bold mb-2">
+                  Single Line Diagram (SLD)
+                </h5>
+                <p class="card-text text-secondary small">
+                  SLD 1 fasa hingga 3 fasa untuk panel, instalasi, dan proteksi
+                  gedung.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card service-card text-center p-4">
+              <div class="card-body">
+                <div class="service-icon mb-3">
+                  <i class="bi bi-calculator" style="font-size: 2.5rem"></i>
+                </div>
+                <h5 class="card-title fw-bold mb-2">Perhitungan Beban</h5>
+                <p class="card-text text-secondary small">
+                  Analisis beban total, pemilihan kabel, MCB, dan proteksi
+                  grounding.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="my-5 opacity-25" />
+
+    <section class="py-5" id="why-choose-us">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-5 mt-3 display-5">Mengapa Pilih CircuitLab?</h2>
+        <div class="row text-center justify-content-center g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="feature-box p-4">
+              <i class="bi bi-currency-dollar display-4 mb-3"></i>
+              <h5 class="fw-bold">Harga Terjangkau</h5>
+              <p class="text-muted">
+                Alternatif hemat biaya bagi mahasiswa & startup tanpa
+                mengorbankan kualitas.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="feature-box p-4">
+              <i class="bi bi-globe2 display-4 mb-3"></i>
+              <h5 class="fw-bold">Digital & Online</h5>
+              <p class="text-muted">
+                Proses pemesanan dan komunikasi mudah, dapat diakses kapan saja
+                dan di mana saja.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="feature-box p-4">
+              <i class="bi bi-check-square-fill display-4 mb-3"></i>
+              <h5 class="fw-bold">Standar Teknik</h5>
+              <p class="text-muted">
+                Semua hasil kerja sesuai standar industri dan regulasi
+                (SNI/IEC).
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="feature-box p-4">
+              <i class="bi bi-lightning-charge-fill display-4 mb-3"></i>
+              <h5 class="fw-bold">Fast Response</h5>
+              <p class="text-muted">
+                Komunikasi cepat, revisi fleksibel, dan pengerjaan tepat waktu.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="my-5 opacity-25" />
+
+    <section class="py-5" id="alur-pemesanan">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-5 mt-3 display-5">Alur Pemesanan Cepat</h2>
+
+        <div class="row text-center justify-content-center g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="step-box p-4">
+              <div
+                class="step-number text-white rounded-circle mb-3 mx-auto fw-bold">
+                1
+              </div>
+              <h5 class="fw-bold">Upload Brief Proyek</h5>
+              <p class="text-muted small">
+                Kirimkan detail kebutuhan proyek melalui formulir online.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="step-box p-4">
+              <div
+                class="step-number text-white rounded-circle mb-3 mx-auto fw-bold">
+                2
+              </div>
+              <h5 class="fw-bold">Diskusi & Konsultasi</h5>
+              <p class="text-muted small">
+                Kami klarifikasi kebutuhan teknis dan berikan estimasi biaya.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="step-box p-4">
+              <div
+                class="step-number text-white rounded-circle mb-3 mx-auto fw-bold">
+                3
+              </div>
+              <h5 class="fw-bold">Pengerjaan & Revisi</h5>
+              <p class="text-muted small">
+                Proses desain dimulai dengan update berkala dan revisi.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="step-box p-4">
+              <div
+                class="step-number text-white rounded-circle mb-3 mx-auto fw-bold">
+                4
+              </div>
+              <h5 class="fw-bold">File Final Siap</h5>
+              <p class="text-muted small">
+                Terima file lengkap (Gerber/DWG/PDF) siap untuk produksi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="my-5 opacity-25" />
+
+    <section class="py-5" id="contoh-hasil-kerja">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-5 mt-3 display-5">Contoh Hasil Kerja</h2>
+
+        <div class="row justify-content-center g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="work-card text-center p-4">
+              <div class="work-image-wrapper mb-3">
+                <img src="sld1.jpg" class="img-static" alt="SLD Statis" />
+                <img src="sld2.jpg" class="img-hover" alt="SLD Bergerak" />
+              </div>
+              <p class="fw-bold mb-1">Single Line Diagram 3 Fasa</p>
+              <small class="text-muted">Instalasi Listrik Industri</small>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="work-card text-center p-4">
+              <div class="work-image-wrapper mb-3">
+                <img src="pcb1.jpg" class="img-static" alt="PCB Statis" />
+                <img src="pcb2.jpg" class="img-hover" alt="PCB Bergerak" />
+              </div>
+              <p class="fw-bold mb-1">PCB 4 Layer IoT Module</p>
+              <small class="text-muted">ESP32 & Power Management</small>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="work-card text-center p-4">
+              <div class="work-image-wrapper mb-3">
+                <img
+                  src="lc1.jpg"
+                  class="img-static"
+                  alt="Perhitungan Statis" />
+                <img
+                  src="lc2.jpg"
+                  class="img-hover"
+                  alt="Perhitungan Bergerak" />
+              </div>
+              <p class="fw-bold mb-1">Perhitungan Beban Instalasi</p>
+              <small class="text-muted">Kabel, Proteksi, dan Grounding</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="my-5 opacity-25" />
+
+    <section class="py-5" id="paket-harga">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-5 mt-3 display-5">Paket Harga</h2>
+
+        <div class="row justify-content-center g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="card pricing-card popular-card shadow-lg">
+              <div class="popular-badge">REKOMENDASI</div>
+              <div class="card-body p-4 text-center">
+                <h4 class="card-title fw-bold mb-3">PCB Design</h4>
+                <p class="display-6 fw-bold mb-3 text-dark">
+                  Mulai dari Rp 250.000
+                </p>
+                <ul class="list-unstyled text-start feature-list mx-auto">
+                  <li>
+                    <i class="bi bi-check-lg text-success me-2"></i> 1–2 layer
+                  </li>
+                  <li>
+                    <i class="bi bi-check-lg text-success me-2"></i> File Gerber
+                    + PDF
+                  </li>
+                  <li>
+                    <i class="bi bi-check-lg text-success me-2"></i> 1x Revisi
+                  </li>
+                  <li>
+                    <i class="bi bi-check-lg text-success me-2"></i> 1x
+                    Konsultasi
+                  </li>
+                </ul>
+                <a
+                  href="LINK_G_FORM_ANDA_DI_SINI?paket=pcb"
+                  target="_blank"
+                  class="btn btn-pilih-paket mt-4"
+                  >Pilih Paket</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card pricing-card">
+              <div class="card-body p-4 text-center">
+                <h4 class="card-title fw-bold mb-3">
+                  Single Line Diagram (SLD)
+                </h4>
+                <p class="display-6 fw-bold mb-3 text-dark">
+                  Mulai dari Rp 275.000
+                </p>
+                <ul class="list-unstyled text-start feature-list mx-auto">
+                  <li>
+                    <i class="bi bi-check-lg text-success me-2"></i> SLD 1
+                    panel/sistem
+                  </li>
+                  <li>
+                    <i class="bi bi-check-lg text-success me-2"></i> File PDF (+
+                    DWG opsional)
+                  </li>
+                  <li>
+                    <i class="bi bi-check-lg text-success me-2"></i> 1x Revisi
+                  </li>
+                  <li>
+                    <i class="bi bi-check-lg text-success me-2"></i> 1x
+                    Konsultasi
+                  </li>
+                </ul>
+                <a
+                  href="LINK_G_FORM_ANDA_DI_SINI?paket=sld"
+                  target="_blank"
+                  class="btn btn-pilih-paket mt-4"
+                  >Pilih Paket</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card pricing-card">
+              <div class="card-body p-4 text-center">
+                <h4 class="card-title fw-bold mb-3">
+                  Perhitungan Beban Listrik
+                </h4>
+                <p class="display-6 fw-bold mb-3 text-dark">
+                  Mulai dari Rp 225.000
+                </p>
+                <ul class="list-unstyled text-start feature-list mx-auto">
+                  <li>
+                    <i class="bi bi-check-lg text-success me-2"></i> Rekap beban
+                    lengkap
+                  </li>
+                  <li>
+                    <i class="bi bi-check-lg text-success me-2"></i> File Excel
+                    + PDF
+                  </li>
+                  <li>
+                    <i class="bi bi-check-lg text-success me-2"></i> 1x Revisi
+                  </li>
+                  <li>
+                    <i class="bi bi-check-lg text-success me-2"></i> 1x
+                    Konsultasi
+                  </li>
+                </ul>
+                <a
+                  href="LINK_G_FORM_ANDA_DI_SINI?paket=beban"
+                  target="_blank"
+                  class="btn btn-pilih-paket mt-4"
+                  >Pilih Paket</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-center text-muted mt-4 small">
+          * Harga dapat menyesuaikan kompleksitas proyek dan kebutuhan tambahan.
+        </p>
+      </div>
+    </section>
+
+    <hr class="my-5 opacity-25" />
+
+    <section class="py-5" id="testimoni-klien">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-5 mt-3 display-5">Apa Kata Klien Kami?</h2>
+
+        <div class="row justify-content-center g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="testimonial-card shadow-sm">
+              <i
+                class="bi bi-quote display-4 d-block mb-2"
+                style="color: var(--accent-color)"></i>
+              <p class="quote-text mb-4">
+                "Desain PCB cepat dan rapi, cocok buat tugas akhir. Prosesnya
+                mudah dan hasilnya memuaskan!"
+              </p>
+
+              <div class="d-flex align-items-center">
+                <div
+                  class="avatar-placeholder bg-secondary rounded-circle me-3">
+                  <i class="bi bi-person-fill text-white"></i>
+                </div>
+                <div>
+                  <p class="mb-0 fw-bold">Mahasiswa Elektro ITS</p>
+                  <small class="text-muted">Tugas Akhir PCB</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="testimonial-card shadow-sm">
+              <i
+                class="bi bi-quote display-4 d-block mb-2"
+                style="color: var(--accent-color)"></i>
+              <p class="quote-text mb-4">
+                "Harga terjangkau untuk startup kecil. Tim CircuitLab sangat
+                responsif dan membantu kami launch produk IoT pertama."
+              </p>
+
+              <div class="d-flex align-items-center">
+                <div
+                  class="avatar-placeholder bg-secondary rounded-circle me-3">
+                  <i class="bi bi-person-fill text-white"></i>
+                </div>
+                <div>
+                  <p class="mb-0 fw-bold">Founder IoT Startup</p>
+                  <small class="text-muted">Smart Home Device</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="testimonial-card shadow-sm">
+              <i
+                class="bi bi-quote display-4 d-block mb-2"
+                style="color: var(--accent-color)"></i>
+              <p class="quote-text mb-4">
+                "SLD dan perhitungan beban sangat detail sesuai standar.
+                Membantu sekali untuk proyek instalasi listrik gedung."
+              </p>
+
+              <div class="d-flex align-items-center">
+                <div
+                  class="avatar-placeholder bg-secondary rounded-circle me-3">
+                  <i class="bi bi-person-fill text-white"></i>
+                </div>
+                <div>
+                  <p class="mb-0 fw-bold">Kontraktor Listrik</p>
+                  <small class="text-muted">Proyek Gedung 3 Lantai</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="my-5 opacity-25" />
+
+    <section class="py-5" id="form-proyek">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-5 mt-3 display-5">Mulai Proyek Anda Sekarang!</h2>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10">
+            <div class="card p-4 form-card shadow-lg">
+              <div class="card-body">
+                <form id="contactForm">
+                  <div class="row mb-3">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                      <label for="namaLengkap" class="form-label fw-bold"
+                        >Nama Lengkap</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="namaLengkap"
+                        placeholder="Nama Anda"
+                        required />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="email" class="form-label fw-bold"
+                        >Email</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="email@example.com"
+                        required />
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                      <label for="whatsapp" class="form-label fw-bold"
+                        >WhatsApp</label
+                      >
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="whatsapp"
+                        placeholder="08xxxxxxxxxx"
+                        required />
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="jenisLayanan" class="form-label fw-bold"
+                        >Jenis Layanan</label
+                      >
+                      <select class="form-select" id="jenisLayanan" required>
+                        <option selected disabled value="">Pilih...</option>
+                        <option value="Desain PCB">Desain PCB</option>
+                        <option value="SLD/Kelistrikan">SLD/Kelistrikan</option>
+                        <option value="Perhitungan Beban">
+                          Perhitungan Beban
+                        </option>
+                        <option value="Paket Lengkap">Paket Lengkap</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="mb-4">
+                    <label for="deskripsi" class="form-label fw-bold"
+                      >Deskripsi Singkat Proyek</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="deskripsi"
+                      rows="3"
+                      placeholder="Jelaskan kebutuhan Anda: (misalnya: PCB 2 layer untuk sensor suhu, SLD 1 fasa untuk rumah tipe 36, dll.)"
+                      required></textarea>
+                  </div>
+
+                  <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                      Kirim Detail Proyek <i class="bi bi-send-fill"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a
+      href="https://wa.me/6289699616145?text=Halo%20CircuitLab,%20saya%20mau%20konsultasi%20."
+      target="_blank"
+      class="btn chat-fixed-button">
+      <i class="bi bi-whatsapp me-2"></i> Chat Kami
+    </a>
+
+    <footer class="footer py-5 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4 mb-md-0">
+            <a
+              class="navbar-brand d-flex align-items-center mb-3 logo-placeholder"
+              href="#home">
+              <i
+                class="bi bi-gear-fill"
+                style="font-size: 1.5rem; margin-right: 8px"></i>
+              <span class="fw-bold">CircuitLab</span>
+            </a>
+            <p>
+              Solusi desain kelistrikan dan PCB profesional, cepat, dan
+              terjangkau.
+            </p>
+            <p>&copy; 2024 CircuitLab. All rights reserved.</p>
+          </div>
+
+          <div class="col-md-2 mb-3 mb-md-0">
+            <h6 class="fw-bold mb-3">Layanan</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#layanan-utama" class="text-decoration-none"
+                  >Desain PCB</a
+                >
+              </li>
+              <li>
+                <a href="#layanan-utama" class="text-decoration-none"
+                  >SLD & Instalasi</a
+                >
+              </li>
+              <li>
+                <a href="#layanan-utama" class="text-decoration-none"
+                  >Perhitungan Beban</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-2 mb-3 mb-md-0">
+            <h6 class="fw-bold mb-3">Informasi</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#paket-harga" class="text-decoration-none">Harga</a>
+              </li>
+              <li>
+                <a href="#contoh-hasil-kerja" class="text-decoration-none"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a href="#alur-pemesanan" class="text-decoration-none"
+                  >Alur Kerja</a
+                >
+              </li>
+              <li>
+                <a href="#testimoni-klien" class="text-decoration-none"
+                  >Testimoni</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <h6 class="fw-bold mb-3">Hubungi Kami</h6>
+            <p>
+              <i class="bi bi-envelope-fill me-2"></i>
+              circuitlab.service@email.com
+            </p>
+            <p><i class="bi bi-whatsapp me-2"></i> +62 8xx xxxx xxxx</p>
+            <div class="d-flex gap-3 mt-3">
+              <a href="#" target="_blank" class="text-white"
+                ><i class="bi bi-instagram fs-4"></i
+              ></a>
+              <a href="#" target="_blank" class="text-white"
+                ><i class="bi bi-linkedin fs-4"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>

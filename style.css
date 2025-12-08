@@ -1,0 +1,547 @@
+/* --- VARIABEL WARNA --- */
+:root {
+  --primary-color: #001f3f; /* Dark Blue / Navy (Latar Belakang Gelap) */
+  --accent-color: #00bcd4; /* Bright Cyan / Electric Blue (Aksen Utama) */
+  --secondary-color: #f0f2f5; /* Light Gray/Off-White (Latar Belakang Konten) */
+  --text-dark: #343a40; /* Teks Gelap */
+  --text-light: #adb5bd; /* Teks Abu-abu Pudar */
+  --shadow-color: rgba(0, 31, 63, 0.15);
+}
+
+/* --- GLOBAL STYLES --- */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(
+    --secondary-color
+  ); /* Latar belakang utama abu-abu muda */
+  color: var(--text-dark);
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+h2 {
+  font-size: 2.5rem;
+}
+
+/* --- HEADER & NAVBAR --- */
+#header {
+  background-color: var(--primary-color); /* Latar belakang dark navy */
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+}
+#header .navbar-brand .fw-bold {
+  color: white !important;
+}
+.navbar-brand .bi-gear-fill {
+  color: var(--accent-color) !important;
+}
+.nav-link {
+  color: white !important; /* Warna teks navbar putih */
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding: 8px 0;
+}
+.nav-link:hover {
+  color: var(--accent-color) !important;
+}
+.nav-link.active {
+  color: var(--accent-color) !important;
+  font-weight: 600;
+  border-bottom: 3px solid var(--accent-color);
+  padding-bottom: 5px !important;
+}
+/* Tombol offcanvas (hamburger menu) */
+#header button {
+  color: white !important;
+}
+.offcanvas-header {
+  background-color: var(--primary-color);
+  color: white;
+}
+.offcanvas-header h5 {
+  color: white;
+}
+.offcanvas-header .btn-close {
+  filter: invert(1); /* Membuat ikon close putih */
+}
+
+/* ==================================== */
+/* 🚀 PERBAIKAN UTAMA: HERO SECTION */
+/* ==================================== */
+.hero-section {
+  background-color: var(--primary-color);
+  color: white;
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+  background-image: linear-gradient(
+      0deg,
+      transparent 90%,
+      rgba(0, 188, 212, 0.1) 100%
+    ),
+    linear-gradient(90deg, transparent 90%, rgba(0, 188, 212, 0.1) 100%),
+    linear-gradient(to bottom, #001f3f, #00152b);
+
+  background-size: 20px 20px, 20px 20px, cover;
+  background-position: center;
+  overflow: hidden !important;
+}
+.custom-title {
+  color: white !important;
+  font-size: 3.8rem;
+}
+.custom-subtitle {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* *** PERBAIKAN UKURAN GAMBAR ILUSTRASI *** */
+.illustration-box {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  border-color: rgba(0, 188, 212, 0.5) !important;
+
+  /* Batasi lebar maksimum (misalnya, 450px) */
+  max-width: 450px;
+  margin-left: auto; /* Pusatkan jika lebar kolom lebih besar */
+  margin-right: auto;
+}
+/* *************************************** */
+
+.illustration-box img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/* ... Bagian Tombol Hero (tetap sama) ... */
+/* Tombol Hero */
+.custom-button-dark {
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+  color: var(--primary-color) !important;
+  font-weight: 600;
+}
+.custom-button-dark:hover {
+  background-color: #00a4b7 !important;
+  border-color: #00a4b7 !important;
+}
+.custom-button-outline {
+  border: 2px solid white !important;
+  color: white !important;
+  font-weight: 600;
+}
+.custom-button-outline:hover {
+  background-color: white !important;
+  color: var(--primary-color) !important;
+}
+
+/* --- SECTION LAYANAN & FITUR (Cards) --- */
+.service-card,
+.feature-box,
+.step-box,
+.work-card,
+.testimonial-card,
+.form-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background-color: white;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover,
+.feature-box:hover,
+.work-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px var(--shadow-color);
+}
+
+/* **FIX STABILITAS/CELAH (Mengatasi Layout Shift)** */
+/* Menjamin tinggi yang sama pada elemen kartu */
+.service-card .card-body,
+.feature-box,
+.step-box {
+  min-height: 220px; /* Tinggi minimum yang cukup untuk mencegah geser */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Untuk meratakan konten di dalam kartu */
+}
+.testimonial-card {
+  min-height: 250px;
+}
+
+/* Ikon Berlingkaran pada Card Layanan */
+.service-icon i,
+.feature-box i {
+  color: var(--accent-color) !important;
+  background-color: var(
+    --secondary-color
+  ); /* Latar belakang ikon abu-abu muda */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 2rem !important;
+  box-shadow: inset 0 0 0 1px #e0e0e0;
+  margin: 0 auto; /* Tengah */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- ALUR PEMESANAN (Steps) --- */
+.step-number {
+  background-color: var(--accent-color) !important;
+  color: white;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 10px rgba(0, 188, 212, 0.4);
+  position: relative;
+  display: inline-block;
+}
+.step-number::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 1px solid var(--accent-color);
+  border-radius: 50%;
+  opacity: 0.3;
+}
+.step-box .text-muted {
+  /* Mencegah teks terlalu panjang di satu kartu merusak layout */
+  min-height: 40px;
+}
+
+/* --- CONTOH HASIL KERJA (Portfolio) --- */
+.work-icon-placeholder {
+  background-color: var(--secondary-color);
+  border-radius: 12px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.work-icon-placeholder i {
+  color: var(--primary-color);
+  font-size: 4rem !important;
+}
+.work-card .text-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 5px 0;
+  background-color: rgba(0, 188, 212, 0.8); /* Warna cyan transparan */
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+.work-card:hover .text-overlay {
+  transform: translateY(0);
+}
+
+/* --- PAKET HARGA (Pricing) --- */
+.pricing-card {
+  border: 1px solid #eee;
+  padding-top: 15px !important;
+  min-height: 500px;
+}
+.popular-card {
+  border: 4px solid var(--accent-color) !important;
+  transform: scale(1.03);
+}
+.popular-badge {
+  background-color: var(--accent-color) !important;
+  color: var(--primary-color) !important;
+  font-weight: 700;
+  padding: 4px 15px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+  box-shadow: 0 5px 10px rgba(0, 188, 212, 0.4);
+}
+.feature-list {
+  max-width: 250px;
+}
+.feature-list li {
+  margin-bottom: 8px;
+}
+
+.btn-pilih-paket {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: white !important;
+  font-weight: 600;
+}
+.btn-pilih-paket:hover {
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+  color: var(--primary-color) !important;
+}
+
+/* --- TESTIMONI --- */
+.testimonial-card {
+  border-left: 5px solid var(--accent-color);
+  padding: 30px !important;
+}
+.avatar-placeholder {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+/* --- FORM PROYEK (Kontak) --- */
+.form-card .form-control:focus,
+.form-card .form-select:focus {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 212, 0.25);
+  border-color: var(--accent-color);
+}
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  font-weight: 600;
+}
+.btn-primary:hover {
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+  color: var(--primary-color) !important;
+}
+
+/* --- FOOTER --- */
+.footer {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+.footer h6 {
+  color: var(--accent-color);
+}
+.footer a {
+  color: var(--text-light);
+  transition: color 0.3s ease;
+}
+.footer a:hover {
+  color: var(--accent-color);
+}
+.footer .logo-placeholder .fw-bold {
+  color: white !important;
+}
+
+/* --- FLOATING CHAT BUTTON --- */
+.chat-fixed-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366; /* WhatsApp Green */
+  color: white;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1050;
+  transition: transform 0.3s ease;
+}
+.chat-fixed-button:hover {
+  background-color: #128c7e;
+  transform: scale(1.05);
+}
+
+/* --- ANIMASI & EFEK BARU (style.css) --- */
+
+/* 1. EFEK STICKY HEADER */
+#header {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+/* Warna dan shadow berubah saat class 'scrolled' ditambahkan via JS */
+#header.scrolled {
+  background-color: white; /* Header menjadi putih */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+#header.scrolled .nav-link,
+#header.scrolled .navbar-brand .fw-bold {
+  color: var(--primary-color) !important; /* Teks Navigasi menjadi gelap */
+}
+#header.scrolled .btn {
+  color: var(--primary-color) !important;
+}
+#header.scrolled .nav-link.active {
+  border-bottom: 3px solid var(--accent-color);
+}
+
+/* 2. EFEK ANIMASI UNTUK TOMBOL WHATSAPP (Pulse Effect) */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--accent-color);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 188, 212, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 188, 212, 0);
+  }
+}
+.chat-fixed-button {
+  /* Gunakan warna hijau WhatsApp yang otentik, lalu terapkan animasi pulse */
+  background-color: #25d366;
+  animation: pulse 2s infinite;
+}
+
+/* 3. ANIMASI HERO (Initial State - Sembunyikan elemen Hero) */
+.hero-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out 0.5s, transform 1s ease-out 0.5s;
+}
+.hero-illustration {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 1s ease-out 0.8s, transform 1s ease-out 0.8s;
+}
+/* Tambahkan class 'animate' pada Hero saat DOM Loaded (diurus oleh JS) */
+.hero-content.animate,
+.hero-illustration.animate {
+  opacity: 1;
+  transform: none;
+}
+
+/* --- MEDIA QUERY: PENYESUAIAN KHUSUS UNTUK TAMPILAN HP (max-width: 991.98px) --- */
+/* (Bootstrap standard for devices smaller than desktop/lg) */
+@media (max-width: 991.98px) {
+  /* 1. KONTROL NAVBAR TOGGLE (IKON HAMBURGER) */
+  /* Pastikan tombol selalu terlihat kontras. */
+  #header .navbar-toggler {
+    /* Warna default ikon saat header gelap */
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  #header .navbar-toggler-icon {
+    /* Ikon harus putih saat header gelap */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  /* 2. SKENARIO HEADER SETELAH DI-SCROLL (Berubah menjadi Putih) */
+  #header.scrolled {
+    /* Latar belakang sudah diatur menjadi white di CSS utama */
+    background-color: white;
+  }
+
+  /* Tombol Toggler harus berubah warna menjadi gelap agar terlihat di latar belakang putih */
+  #header.scrolled .navbar-toggler-icon {
+    /* Ikon hamburger menjadi dark blue (--primary-color) */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23001f3f' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  /* 3. PENYESUAIAN PADA OFFcanvas saat scroll */
+  /* Karena menu offcanvas Anda sudah diatur menggunakan primary-color (gelap), 
+       kita hanya perlu memastikan transisi tombol hamburgernya benar. */
+
+  /* Ketika di mode offcanvas (tidak di-scroll), elemen di dalamnya harus putih */
+  .offcanvas-body .nav-link,
+  .offcanvas-body .navbar-brand .fw-bold {
+    color: white !important;
+  }
+}
+
+/* --- ANIMASI & EFEK BARU (Lanjutan dari Kode Anda) --- */
+/* 1. EFEK STICKY HEADER */
+#header {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+/* ... (Tetap pertahankan kode .scrolled yang sudah Anda miliki) ... */
+#header.scrolled {
+  background-color: white; /* Header menjadi putih */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+#header.scrolled .nav-link,
+#header.scrolled .navbar-brand .fw-bold {
+  color: var(--primary-color) !important; /* Teks Navigasi menjadi gelap */
+}
+/* ... */
+
+/* ------------------------------------- */
+/* 1.1. Penyesuaian Dark/Light Mode Icon */
+/* ------------------------------------- */
+#theme-toggle-desktop,
+#theme-toggle-mobile {
+  color: var(
+    --text-light
+  ); /* Warna ikon mengikuti warna teks utama (adaptif) */
+  background: transparent;
+  border: none;
+  transition: color 0.3s;
+}
+
+#theme-toggle-desktop:hover,
+#theme-toggle-mobile:hover {
+  color: var(--accent-color);
+}
+
+/* ------------------------------------- */
+/* 1.2. Penyesuaian Work Card (Dua Gambar) */
+/* ------------------------------------- */
+.work-card {
+  /* Pastikan work-card memiliki position: relative jika perlu elemen absolut di dalamnya */
+  position: relative;
+  overflow: hidden; /* Penting untuk menyembunyikan gambar yang tidak aktif */
+}
+
+.work-image-wrapper {
+  /* Ganti work-icon-placeholder dengan wrapper ini */
+  position: relative;
+  height: 120px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--primary-color); /* Background adaptif */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.work-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Gambar statis (tampil saat normal) */
+.work-image-wrapper .img-static {
+  opacity: 1;
+}
+
+/* Gambar hover (disembunyikan saat normal) */
+.work-image-wrapper .img-hover {
+  opacity: 0;
+}
+
+/* Efek Hover: Sembunyikan statis, tampilkan hover */
+.work-card:hover .work-image-wrapper .img-static {
+  opacity: 0;
+}
+
+.work-card:hover .work-image-wrapper .img-hover {
+  opacity: 1; /* Tampilkan gambar bergerak */
+}
