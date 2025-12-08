@@ -40,7 +40,23 @@
           >
           <a class="nav-link text-dark mx-2" href="#paket-harga">Harga</a>
           <a class="nav-link text-dark mx-2" href="#form-proyek">Kontak</a>
-          
+        </nav>
+        <div class="d-flex align-items-center">
+          <button
+            class="btn btn-sm d-none d-lg-block ms-3"
+            id="theme-toggle-desktop">
+            <i class="bi bi-sun-fill fs-5"></i>
+          </button>
+
+          <button
+            class="btn btn-sm d-lg-none p-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar">
+            <i class="bi bi-list fs-1"></i>
+          </button>
+        </div>
         <div
           class="offcanvas offcanvas-end"
           tabindex="-1"
@@ -99,6 +115,13 @@
                   >Kontak</a
                 >
               </li>
+              <li class="nav-item mt-3">
+                <button
+                  class="btn custom-button-outline w-100"
+                  id="theme-toggle-mobile">
+                  <i class="bi bi-sun-fill me-2"></i> Mode Gelap/Terang
+                </button>
+              </li>
             </ul>
           </div>
         </div>
@@ -108,7 +131,7 @@
     <section class="hero-section" id="home">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="col-lg-6 mb-5 mb-lg-0 hero-content">
             <h1 class="fw-bold mb-3 custom-title">
               Jasa Desain Kelistrikan & <br />PCB
             </h1>
@@ -135,7 +158,7 @@
           </div>
 
           <div class="col-lg-6 d-flex justify-content-center">
-            <div class="illustration-box">
+            <div class="illustration-box hero-illustration">
               <img src="pcb.jpg" alt="Ilustrasi Desain PCB" />
               <div class="illustration-content"></div>
             </div>
@@ -146,10 +169,17 @@
 
     <section class="services-section py-5" id="layanan-utama">
       <div class="container">
-        <h2 class="text-center fw-bold mb-5 mt-3 display-5">Layanan Utama</h2>
+        <h2
+          class="text-center fw-bold mb-5 mt-3 display-5"
+          data-aos="fade-in-up">
+          Layanan Utama
+        </h2>
 
         <div class="row g-4 justify-content-center">
-          <div class="col-lg-4 col-md-6">
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-in-up"
+            data-aos-delay="100">
             <div class="card service-card text-center p-4">
               <div class="card-body">
                 <div class="service-icon mb-3">
@@ -164,7 +194,10 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-in-up"
+            data-aos-delay="300">
             <div class="card service-card text-center p-4">
               <div class="card-body">
                 <div class="service-icon mb-3">
@@ -183,7 +216,10 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-in-up"
+            data-aos-delay="500">
             <div class="card service-card text-center p-4">
               <div class="card-body">
                 <div class="service-icon mb-3">
@@ -205,9 +241,16 @@
 
     <section class="py-5" id="why-choose-us">
       <div class="container">
-        <h2 class="text-center fw-bold mb-5 mt-3 display-5">Mengapa Pilih CircuitLab?</h2>
+        <h2
+          class="text-center fw-bold mb-5 mt-3 display-5"
+          data-aos="fade-in-up">
+          Mengapa Pilih CircuitLab?
+        </h2>
         <div class="row text-center justify-content-center g-4">
-          <div class="col-lg-3 col-md-6">
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-in-up"
+            data-aos-delay="100">
             <div class="feature-box p-4">
               <i class="bi bi-currency-dollar display-4 mb-3"></i>
               <h5 class="fw-bold">Harga Terjangkau</h5>
@@ -218,7 +261,10 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6">
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-in-up"
+            data-aos-delay="250">
             <div class="feature-box p-4">
               <i class="bi bi-globe2 display-4 mb-3"></i>
               <h5 class="fw-bold">Digital & Online</h5>
@@ -229,7 +275,10 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6">
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-in-up"
+            data-aos-delay="400">
             <div class="feature-box p-4">
               <i class="bi bi-check-square-fill display-4 mb-3"></i>
               <h5 class="fw-bold">Standar Teknik</h5>
@@ -240,7 +289,10 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6">
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-in-up"
+            data-aos-delay="550">
             <div class="feature-box p-4">
               <i class="bi bi-lightning-charge-fill display-4 mb-3"></i>
               <h5 class="fw-bold">Fast Response</h5>
@@ -257,13 +309,19 @@
 
     <section class="py-5" id="alur-pemesanan">
       <div class="container">
-        <h2 class="text-center fw-bold mb-5 mt-3 display-5">Alur Pemesanan Cepat</h2>
+        <h2
+          class="text-center fw-bold mb-5 mt-3 display-5"
+          data-aos="fade-in-up">
+          Alur Pemesanan Cepat
+        </h2>
 
         <div class="row text-center justify-content-center g-4">
-          <div class="col-lg-3 col-md-6">
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-in-right"
+            data-aos-delay="100">
             <div class="step-box p-4">
-              <div
-                class="step-number text-white rounded-circle mb-3 mx-auto fw-bold">
+              <div class="step-number rounded-circle mb-3 mx-auto fw-bold">
                 1
               </div>
               <h5 class="fw-bold">Upload Brief Proyek</h5>
@@ -273,10 +331,12 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6">
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-in-right"
+            data-aos-delay="300">
             <div class="step-box p-4">
-              <div
-                class="step-number text-white rounded-circle mb-3 mx-auto fw-bold">
+              <div class="step-number rounded-circle mb-3 mx-auto fw-bold">
                 2
               </div>
               <h5 class="fw-bold">Diskusi & Konsultasi</h5>
@@ -286,10 +346,12 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6">
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-in-left"
+            data-aos-delay="300">
             <div class="step-box p-4">
-              <div
-                class="step-number text-white rounded-circle mb-3 mx-auto fw-bold">
+              <div class="step-number rounded-circle mb-3 mx-auto fw-bold">
                 3
               </div>
               <h5 class="fw-bold">Pengerjaan & Revisi</h5>
@@ -299,10 +361,12 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6">
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-in-left"
+            data-aos-delay="100">
             <div class="step-box p-4">
-              <div
-                class="step-number text-white rounded-circle mb-3 mx-auto fw-bold">
+              <div class="step-number rounded-circle mb-3 mx-auto fw-bold">
                 4
               </div>
               <h5 class="fw-bold">File Final Siap</h5>
@@ -319,10 +383,17 @@
 
     <section class="py-5" id="contoh-hasil-kerja">
       <div class="container">
-        <h2 class="text-center fw-bold mb-5 mt-3 display-5">Contoh Hasil Kerja</h2>
+        <h2
+          class="text-center fw-bold mb-5 mt-3 display-5"
+          data-aos="fade-in-up">
+          Contoh Hasil Kerja
+        </h2>
 
         <div class="row justify-content-center g-4">
-          <div class="col-lg-4 col-md-6">
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="zoom-in"
+            data-aos-delay="100">
             <div class="work-card text-center p-4">
               <div class="work-image-wrapper mb-3">
                 <img src="sld1.jpg" class="img-static" alt="SLD Statis" />
@@ -333,7 +404,10 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="zoom-in"
+            data-aos-delay="300">
             <div class="work-card text-center p-4">
               <div class="work-image-wrapper mb-3">
                 <img src="pcb1.jpg" class="img-static" alt="PCB Statis" />
@@ -344,7 +418,10 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="zoom-in"
+            data-aos-delay="500">
             <div class="work-card text-center p-4">
               <div class="work-image-wrapper mb-3">
                 <img
@@ -368,10 +445,17 @@
 
     <section class="py-5" id="paket-harga">
       <div class="container">
-        <h2 class="text-center fw-bold mb-5 mt-3 display-5">Paket Harga</h2>
+        <h2
+          class="text-center fw-bold mb-5 mt-3 display-5"
+          data-aos="fade-in-up">
+          Paket Harga
+        </h2>
 
         <div class="row justify-content-center g-4">
-          <div class="col-lg-4 col-md-6">
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="flip-up"
+            data-aos-delay="100">
             <div class="card pricing-card popular-card shadow-lg">
               <div class="popular-badge">REKOMENDASI</div>
               <div class="card-body p-4 text-center">
@@ -405,7 +489,10 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="flip-up"
+            data-aos-delay="300">
             <div class="card pricing-card">
               <div class="card-body p-4 text-center">
                 <h4 class="card-title fw-bold mb-3">
@@ -441,7 +528,10 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="flip-up"
+            data-aos-delay="500">
             <div class="card pricing-card">
               <div class="card-body p-4 text-center">
                 <h4 class="card-title fw-bold mb-3">
@@ -488,10 +578,17 @@
 
     <section class="py-5" id="testimoni-klien">
       <div class="container">
-        <h2 class="text-center fw-bold mb-5 mt-3 display-5">Apa Kata Klien Kami?</h2>
+        <h2
+          class="text-center fw-bold mb-5 mt-3 display-5"
+          data-aos="fade-in-up">
+          Apa Kata Klien Kami?
+        </h2>
 
         <div class="row justify-content-center g-4">
-          <div class="col-lg-4 col-md-6">
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-in-right"
+            data-aos-delay="100">
             <div class="testimonial-card shadow-sm">
               <i
                 class="bi bi-quote display-4 d-block mb-2"
@@ -514,7 +611,10 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-in-right"
+            data-aos-delay="300">
             <div class="testimonial-card shadow-sm">
               <i
                 class="bi bi-quote display-4 d-block mb-2"
@@ -537,7 +637,10 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-in-right"
+            data-aos-delay="500">
             <div class="testimonial-card shadow-sm">
               <i
                 class="bi bi-quote display-4 d-block mb-2"
@@ -567,10 +670,14 @@
 
     <section class="py-5" id="form-proyek">
       <div class="container">
-        <h2 class="text-center fw-bold mb-5 mt-3 display-5">Mulai Proyek Anda Sekarang!</h2>
+        <h2
+          class="text-center fw-bold mb-5 mt-3 display-5"
+          data-aos="fade-in-up">
+          Mulai Proyek Anda Sekarang!
+        </h2>
 
         <div class="row justify-content-center">
-          <div class="col-lg-8 col-md-10">
+          <div class="col-lg-8 col-md-10" data-aos="fade-in-up">
             <div class="card p-4 form-card shadow-lg">
               <div class="card-body">
                 <form id="contactForm">
